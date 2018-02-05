@@ -1,9 +1,18 @@
 
 # Instructions
 
+Clone this repository with `git clone --recurse-submodules https://github.com/TheCDC/cbu_homecoming_2018`
+
 ## Installing Dependencies
 
+If you didn't use the above command, initialize/fetch submodules:
+```
+git submodule init
+git submodule update
+```
+
 I wrote these commands for my linux system(s), but they should work on Windows as well, although instances of `python3` might need to be replaced with `python`.
+
 
 Execute these commands from the repo root.
 
