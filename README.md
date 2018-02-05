@@ -24,7 +24,9 @@ Doing so will install all dependencies in a virtual environment.
 sudo apt install graphviz
 ```
 
-Execute it (while in pipenv shell) with `python markov.py`. Doing so should automatically open a browser tab pointed to the web interface. Furhter instructions are within said interface.
+Execute it (while in pipenv shell) with `python markov.py`. Doing so should automatically open a browser tab pointed to the web interface. Further instructions are within said interface.
+
+Close it as a normal console application by either closing the console window or otherwise killing the process.
 
 ## Evil RPS Demo
 
