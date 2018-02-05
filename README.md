@@ -2,6 +2,8 @@
 
 ## General Dependencies
 
+Execute these commands from the repo root.
+
 ```
 pip3 install --user pipenv
 pipenv --python 3.6
