@@ -17,3 +17,5 @@ pipenv install pydot
 ```
 
 ## Evil RPS Demo
+
+This shares dependencies with the Markov demo.
