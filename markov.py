@@ -24,12 +24,16 @@ class MyApp(remi.App):
         g = m.to_graph()
         num_nodes = len(m.transitions)
         num_edges = sum(len(x) for x in m.transitions.values())
-        self.label3.set_text(f'{num_nodes}, {num_edges}')
+        self.label3.set_text(f'{num_nodes} nodes, {num_edges} edges')
         target = '/' + graph_img + '?' + str(random.random())
+        try:
+            os.remove(graph_img)
+        except FileNotFoundError:
+            pass
         if num_nodes < 250 and num_edges < 250:
             g.write_png(graph_img)
-            self.graph_img.attributes['src'] = target
-            self.graph_img.redraw()
+        self.graph_img.attributes['src'] = target
+        self.graph_img.redraw()
         print('target', target)
 
     def main(self):
@@ -37,7 +41,7 @@ class MyApp(remi.App):
         self.root = gui.VBox(
             style={
                 'text-align': 'center',
-            }, width=800, margin='auto')
+            }, width=1200, margin='auto')
         self.container = gui.VBox(width='100%')
         self.title = gui.Label('Markov Text Generator.')
         self.instructions = gui.Label(
