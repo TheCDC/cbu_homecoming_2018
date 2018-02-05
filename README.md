@@ -1,6 +1,5 @@
-# Setup
 
-## General Dependencies
+# Instructions
 
 Execute these commands from the repo root.
 
@@ -20,3 +19,5 @@ sudo apt install graphviz
 ## Evil RPS Demo
 
 This shares dependencies with the Markov demo.
+
+## N-Body Physics Simulation
