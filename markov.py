@@ -12,6 +12,8 @@ graph_img = os.path.join(resource_dir, 'markov_graph.png')
 
 class MyApp(remi.App):
     def __init__(self, *args):
+        # supply a path for finding files
+        # https://github.com/dddomodossola/remi/issues/207
         super().__init__(*args, static_file_path=resource_dir)
 
     def generate_output(self, *args):
