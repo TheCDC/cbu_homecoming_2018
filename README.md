@@ -1,6 +1,10 @@
 
 # Instructions
 
+## Installing Dependencies
+
+I wrote these commands for my linux system(s), but they should work on Windows as well, although instances of `python3` might need to be replaced with `python`.
+
 Execute these commands from the repo root.
 
 ```
@@ -10,14 +14,25 @@ pipenv install
 pipenv shell
 
 ```
+Doing so will install all dependencies in a virtual environment.
+
+`pipenv shell` puts your shell in a context where the dependencies are accessible.
+
 
 ## Markov Demo
 ```
 sudo apt install graphviz
 ```
 
+Execute it (while in pipenv shell) with `python markov.py`. Doing so should automatically open a browser tab pointed to the web interface. Furhter instructions are within said interface.
+
 ## Evil RPS Demo
 
 This shares dependencies with the Markov demo.
 
+TODO: implement GUI, write execution instructions.
+
+
 ## N-Body Physics Simulation
+
+TODO: installation and execution instructions.
