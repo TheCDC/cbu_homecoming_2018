@@ -87,7 +87,7 @@ class Game:
         elif moves[0] == moves[1]:
             return (None, None)
         else:
-            raise ValueError('THis should never happen.')
+            raise ValueError('This should never happen.')
 
 
 def user_move(other_previous_move=None):
