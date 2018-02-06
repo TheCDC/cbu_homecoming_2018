@@ -4,26 +4,29 @@
 # and uses it to predict their next move
 import pymarkoff
 import random
-import string
-import json
-import os
+import enum
+
 # possible moves
 
-throw_types = [
-    "R",
-    "S",
-    "P",
-]
-throw_to_name = {"R": "Rock", "P": "Paper", "S": "Scissors"}
+
+class Throws(enum.Enum):
+    rock = 'Rock'
+    paper = 'Paper'
+    scissors = 'Scissors'
+
+    def __len__(self):
+        return 1
+
+
 # what beats what/does X beat Y?
 beats = {
-    "R": "S",
-    "S": "P",
-    "P": "R",
+    Throws.rock: Throws.scissors,
+    Throws.scissors: Throws.paper,
+    Throws.paper: Throws.rock,
 }
 beaten_by = {beats[i]: i for i in beats.keys()}
 
-# game loop needs to always ask a player for a throw
+# game loop needs to always ask a player for a throws
 # initially, there is no history of throws
 # let the player make an arbitrary number of throws at the beginning
 # before beginning to model them.
@@ -33,11 +36,66 @@ class QuitError(Exception):
     pass
 
 
-def user_move():
+class Player:
+    """Represents a player in the Game."""
+
+    def __init__(self, name, decision_function):
+        self.name = name
+        self.decision_function = decision_function
+
+    def move(self, other_previous_move):
+        return self.decision_function(other_previous_move)
+
+
+def create_ai():
+    """Return the AI decision function."""
+    memory_length = 4
+    brain = pymarkoff.Markov(
+        [], orders=tuple(range(memory_length)), discrete=False)
+    samples = list()
+
+    def decision(other_previous_move):
+        if other_previous_move is not None:
+            samples.append(other_previous_move)
+        brain.feed([samples[-memory_length:]])
+        my_move = pc_choose(samples, brain)
+        return my_move
+
+    return decision
+
+
+class Game:
+    """Represent the game state."""
+
+    def __init__(self, player_one: Player, player_two: Player):
+        self.players = [player_one, player_two]
+        self.previous_moves = [None, None]
+        self.scores = [0 for _ in self.players]
+
+    def advance(self):
+        moves = [
+            player.move(self.previous_moves[(index + 1) % 2])
+            for index, player in enumerate(self.players)
+        ]
+        self.previous_moves = moves
+        if beats[moves[0]] == moves[1]:
+            self.scores[0] += 1
+            return (self.players[0], moves[0])
+        elif beats[moves[1]] == moves[0]:
+            self.scores[1] += 1
+            return (self.players[1], moves[1])
+        elif moves[0] == moves[1]:
+            return (None, None)
+        else:
+            raise ValueError('THis should never happen.')
+
+
+def user_move(other_previous_move=None):
     """Ask a user for their move.
     Sanitizes input."""
     response = ''
-    while True:
+    chosen = False
+    while not chosen:
         try:
             response = input(
                 "What's your move? (r)ock, (p)aper, (s)cissors, or q to quit\n>>>"
@@ -46,11 +104,16 @@ def user_move():
             raise QuitError("Interrupted")
         if response == 'Q':
             raise QuitError("Quit requested")
-        if response not in throw_types:
-            print("That's not a valid move...")
+        for t in Throws:
+            m = t.name[0].upper()
+            if m == response:
+                user_throw = t
+                chosen = True
+                break
         else:
-            break
-    return response
+            print("That's not a valid move...")
+
+    return user_throw
 
 
 def pc_choose(samples, brain):
@@ -60,83 +123,46 @@ def pc_choose(samples, brain):
         prev = samples[-1]
         # print("Trying to predict based on", prev)
         predicted_player_move = brain.get_next((prev, ))
+
         # print("Prediction made!")
-        return beaten_by[predicted_player_move[0]]
+        return beaten_by[predicted_player_move]
     except pymarkoff.InvalidStateError:
         # this error occurs when the latest moves haven't yet been seen
 
         # print("Not enough data.")
         # print(e)
         pass
-    except IndexError as e:
-        # this error occurs on the first move because there aren't enough samples.
-        # print("Not enough samples.")
-        # print(e)
+    except IndexError:
+        # this error occurs on early moves because there aren't enough samples.
         pass
-    return random.choice(throw_types)
-
-
-def filter_name(s):
-    """Return safe version of user's name."""
-    allowed = string.ascii_letters + string.digits + ' '
-    return ''.join(i for i in s if i in allowed)
+    return random.choice(list(Throws))
 
 
 def main():
-    brain = pymarkoff.Markov([], orders=(0, 1, 2), discrete=False)
 
-    player_score = 0
-    pc_score = 0
-    try:
-        player_name = filter_name(input("What is your name?\n>>>").strip())
-        print("Welcome, {}!".format(player_name))
-    except KeyboardInterrupt:
-        print()
-        print("Have a nice day!")
-        quit()
-    try:
-        target_dir = "rps_markov_samples/"
-        if not os.path.isdir("rps_markov_samples/"):
-            os.makedirs(target_dir)
-        filename = os.path.join(target_dir, player_name, ".txt")
-        print(filename)
-        with open(filename) as f:
-            samples = eval(f.read())
-        print("Welcome back, {}".format(player_name))
-    except (FileNotFoundError, SyntaxError):
-        print("Welcome to Evil Rock Paper Scissor, {}".format(player_name))
-        samples = []
+    print("Welcome to Evil Rock Paper Scissors")
+    human_player = Player('Human', user_move)
+    ai_player = Player('PC', create_ai())
+
+    g = Game(human_player, ai_player)
     while True:
 
-        pc_choice = pc_choose(samples, brain)
         try:
-            player_choice = user_move()
+            winner = g.advance()
+            if winner[0] is not None:
+                print(
+                    f'The winner is {winner[0].name}, who threw {winner[1].name}'
+                )
+            else:
+                print('Draw!')
+            print('Scores:', ','.join(
+                f'{p.name}: {s}' for p, s in zip(g.players, g.scores)))
         except (QuitError, KeyboardInterrupt):
-            with open("rps_markov_samples/" + player_name + ".txt", 'w') as f:
-                f.write(str(samples))
+
             print()
             print("Have a nice day, {}!".format(player_name))
             # print(dict(brain))
             quit()
-
-        samples.append((player_choice, pc_choice))
-        brain.feed([samples[-3:]])
-        # print(dict(brain))
-        # print(samples)
-        print(
-            "You threw {}, the computer threw {}.".format(
-                *[throw_to_name[i] for i in [player_choice, pc_choice]]),
-            end=" ")
-
-        if beats[pc_choice] == player_choice:
-            print("The computer wins!")
-            pc_score += 1
-        elif beats[player_choice] == pc_choice:
-            print("You win!")
-            player_score += 1
-        elif pc_choice == player_choice:
-            print("Draw!")
-        print("Scores: PC: {}, You: {}".format(pc_score, player_score))
 
 
 if __name__ == '__main__':
