@@ -6,15 +6,15 @@ import pymarkoff
 import random
 import enum
 
-# possible moves
-
 
 class Throws(enum.Enum):
+    """Represents possible moves in rock, paper, scissors."""
     rock = 'Rock'
     paper = 'Paper'
     scissors = 'Scissors'
 
     def __len__(self):
+        # necessary to define for Markov model.
         return 1
 
 
@@ -25,11 +25,6 @@ beats = {
     Throws.paper: Throws.rock,
 }
 beaten_by = {beats[i]: i for i in beats.keys()}
-
-# game loop needs to always ask a player for a throws
-# initially, there is no history of throws
-# let the player make an arbitrary number of throws at the beginning
-# before beginning to model them.
 
 
 class QuitError(Exception):
@@ -128,19 +123,15 @@ def pc_choose(samples, brain):
     markov model of previous moves."""
     try:
         prev = samples[-1]
-        # print("Trying to predict based on", prev)
         predicted_player_move = brain.get_next((prev, ))
-
-        # print("Prediction made!")
         return beaten_by[predicted_player_move]
     except pymarkoff.InvalidStateError:
         # this error occurs when the latest moves haven't yet been seen
 
-        # print("Not enough data.")
-        # print(e)
         pass
     except IndexError:
         # this error occurs on early moves because there aren't enough samples.
+        # so do nothing
         pass
     return random.choice(list(Throws))
 
