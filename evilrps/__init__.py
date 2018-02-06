@@ -49,15 +49,19 @@ class Player:
 
 def create_ai():
     """Return the AI decision function."""
+    # instantiate the markov model
     memory_length = 4
     brain = pymarkoff.Markov(
         [], orders=tuple(range(memory_length)), discrete=False)
     samples = list()
 
     def decision(other_previous_move):
+        # don't record null moves
         if other_previous_move is not None:
             samples.append(other_previous_move)
+        # update the model
         brain.feed([samples[-memory_length:]])
+        # make a move based onthe model
         my_move = pc_choose(samples, brain)
         return my_move
 
@@ -73,11 +77,14 @@ class Game:
         self.scores = [0 for _ in self.players]
 
     def advance(self):
+        # leat each player make a move based on their opponent's previous move
         moves = [
             player.move(self.previous_moves[(index + 1) % 2])
             for index, player in enumerate(self.players)
         ]
+        # record the new moves
         self.previous_moves = moves
+        # determin the winner
         if beats[moves[0]] == moves[1]:
             self.scores[0] += 1
             return (self.players[0], moves[0])
