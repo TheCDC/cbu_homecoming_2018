@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7881d30b2d1196b6173381375fbae743d7b59bcede20aa391bc03493708337d2"
+            "sha256": "e7eace8b9df3bef13076e18d3862cf1e3439c4e01bf37d60ee3902e466a52886"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -29,6 +29,9 @@
         ]
     },
     "default": {
+        "evil-rock-paper-scissors": {
+            "git": "git://github.com/TheCDC/evil_rock_paper_scissors"
+        },
         "pydot": {
             "hashes": [
                 "sha256:92d2e2d15531d00710f2d6fb5540d2acabc5399d464f2f20d5d21073af241eb6"
