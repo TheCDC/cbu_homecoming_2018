@@ -1,3 +1,6 @@
 [submodule "particle-gravity"]
 	path = particle-gravity
 	url = https://github.com/TheCDC/particle-gravity
+[submodule "evil_rock_paper_scissors"]
+	path = evil_rock_paper_scissors
+	url = https://github.com/TheCDC/evil_rock_paper_scissors
