@@ -8,6 +8,10 @@ resource_dir = os.path.join(os.path.dirname(__file__), 'res')
 if not os.path.isdir(resource_dir):
     os.makedirs(resource_dir)
 graph_img = os.path.join(resource_dir, 'markov_graph.png')
+try:
+    os.remove(graph_img)
+except FileNotFoundError:
+    pass
 
 
 class MyApp(remi.App):
@@ -64,6 +68,8 @@ class MyApp(remi.App):
 
         self.graph_img = gui.Image(
             '/' + graph_img, width='100%', height='100%')
+        self.quit_button = gui.Button('Quit', color='red')
+        self.quit_button.set_on_click_listener(quit)
 
         # ========== Place UI Elements ==========
         self.root.append(self.container)
@@ -77,6 +83,7 @@ class MyApp(remi.App):
         self.container.append(self.label3)
         self.container.append(self.output_element)
         self.container.append(self.graph_img)
+        self.container.append(self.quit_button)
 
         return self.root
 

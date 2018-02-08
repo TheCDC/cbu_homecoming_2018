@@ -10,7 +10,11 @@ name = "pypi"
 remi = "*"
 pymarkoff = {git = "https://bitbucket.org/TheCDC/pymarkoff"}
 pydot = "*"
-evil_rock_paper_scissors = {git = "git://github.com/TheCDC/evil_rock_paper_scissors"}
+evil-rock-paper-scissors = {git = "git://github.com/TheCDC/evil_rock_paper_scissors"}
+pygame = "*"
+numpy = "*"
+pywebview = "*"
+opencv-python = "*"
 
 
 [dev-packages]

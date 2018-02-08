@@ -1,0 +1,1106 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"blu",
+				"blur_kernerl\tstatement"
+			],
+			[
+				"edges",
+				"edges_brg\tstatement"
+			],
+			[
+				"ed",
+				"edges_brg\tstatement"
+			],
+			[
+				"VID",
+				"VID_WIDTH\tstatement"
+			],
+			[
+				"K_E",
+				"K_ESCAPE\tinstance"
+			],
+			[
+				"EVENT_L",
+				"EVENT_LBUTTONDOWN\tinstance"
+			],
+			[
+				"w",
+				"width\tstatement"
+			],
+			[
+				"FRAM",
+				"FRAME_HEIGHT\tstatement"
+			],
+			[
+				"FRAME",
+				"FRAME_WIDTH\tstatement"
+			],
+			[
+				"HER",
+				"FONT_HERSHEY_SIMPLEX\tinstance"
+			],
+			[
+				"dec",
+				"decision_function\tparam"
+			],
+			[
+				"user_",
+				"user_throw\tstatement"
+			],
+			[
+				"SGS",
+				"SGState"
+			],
+			[
+				"get_",
+				"get_edge_list\tfunction"
+			],
+			[
+				"res",
+				"resource_dir\tstatement"
+			],
+			[
+				"Key",
+				"KeyboardInterrupt\tclass"
+			],
+			[
+				"tar",
+				"target_dir\tstatement"
+			],
+			[
+				"gen",
+				"generate_button\tstatement"
+			],
+			[
+				"con",
+				"container\tstatement"
+			],
+			[
+				"inpu",
+				"input_element\tstatement"
+			],
+			[
+				"PORT",
+				"PORTB"
+			],
+			[
+				"US",
+				"USART_send_string"
+			],
+			[
+				"rece",
+				"receivedChar"
+			],
+			[
+				"USA",
+				"USART_send"
+			],
+			[
+				"BAUD",
+				"BAUDRATE"
+			],
+			[
+				"num",
+				"num_queens\tstatement"
+			],
+			[
+				"generate_next_partials_",
+				"generate_next_partials_oop\tfunction"
+			],
+			[
+				"Que",
+				"QueensPartialSolution\tclass"
+			],
+			[
+				"allamerica",
+				"allamericanregress\tmodule"
+			],
+			[
+				"print",
+				"print_step\tparam"
+			],
+			[
+				"part",
+				"partial\tstatement"
+			],
+			[
+				"inter",
+				"internal_inqueue\tstatement"
+			],
+			[
+				"dis",
+				"distance\tfunction"
+			],
+			[
+				"sli",
+				"slice_length\tstatement"
+			],
+			[
+				"parse",
+				"parse_args\tfunction"
+			],
+			[
+				"Ar",
+				"ArgumentParser\tclass"
+			],
+			[
+				"class",
+				"classmethod\tclass"
+			],
+			[
+				"lower",
+				"lowercase\tinstance"
+			],
+			[
+				"runic",
+				"runic_vowels\tstatement"
+			],
+			[
+				"eng",
+				"english_vowels\tstatement"
+			],
+			[
+				"froz",
+				"frozen_words\tstatement"
+			],
+			[
+				"cur",
+				"cur_dictionary\tstatement"
+			],
+			[
+				"fro",
+				"frozen_words\tstatement"
+			],
+			[
+				"dic",
+				"dictionary_memory\tstatement"
+			],
+			[
+				"PHRA",
+				"PHRASE_COUNTS\tstatement"
+			],
+			[
+				"nu",
+				"num_chars\tstatement"
+			],
+			[
+				"volde",
+				"voldemort2\tfunction"
+			],
+			[
+				"new",
+				"new_word\tstatement"
+			],
+			[
+				"test",
+				"test_words\tstatement"
+			],
+			[
+				"read",
+				"read_dictionary\tfunction"
+			],
+			[
+				"cur_",
+				"cur_node\tstatement"
+			],
+			[
+				"next",
+				"next_char\tstatement"
+			],
+			[
+				"char",
+				"character_sequence\tparam"
+			],
+			[
+				"list",
+				"list_of_words\tparam"
+			],
+			[
+				"generated",
+				"generated_survey"
+			],
+			[
+				"Distrac",
+				"DistractorQuestion"
+			],
+			[
+				"Demo",
+				"DemographicQuestion"
+			],
+			[
+				"studied",
+				"studied_statement_name_pairs"
+			],
+			[
+				"iter",
+				"iterate_all_fixtures\tfunction"
+			],
+			[
+				"type",
+				"type_name_to_enum_int\tstatement"
+			],
+			[
+				"contex",
+				"context_dict\tstatement"
+			],
+			[
+				"comple",
+				"completed_survey\tstatement"
+			],
+			[
+				"slide",
+				"slide_duration"
+			],
+			[
+				"log",
+				"log_errors_to_db_decorator\tfunction"
+			],
+			[
+				"query",
+				"queryset_to_dicts\tfunction"
+			],
+			[
+				"studi",
+				"studied_unstudied\tstatement"
+			],
+			[
+				"statemen",
+				"statement_name_pairs\tstatement"
+			],
+			[
+				"ascii",
+				"ascii_lowercase\tinstance"
+			],
+			[
+				"pla",
+				"players"
+			],
+			[
+				"alis",
+				"align-items"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"life",
+				"lifeButtonContainer"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"word",
+				"word-wrap"
+			],
+			[
+				"flex-",
+				"flex-grow"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"flex",
+				"flex-grow"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"for",
+				"forEach\t( callbackfn: Function, thisArg?: any ): Array Array"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"mag",
+				"margin"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"pl",
+				"players"
+			],
+			[
+				"defa",
+				"default_player"
+			],
+			[
+				"desc",
+				"description\tstatement"
+			],
+			[
+				"speaker",
+				"speaker_name\tstatement"
+			],
+			[
+				"Profe",
+				"ProfessionReligionPairAdmin\tclass"
+			],
+			[
+				"choose_",
+				"choose_professions\tfunction"
+			],
+			[
+				"stateme",
+				"statement_obj\tstatement"
+			],
+			[
+				"correc",
+				"correctness"
+			],
+			[
+				"genera",
+				"generated_survey\tstatement"
+			],
+			[
+				"raw",
+				"raw_speaker_id\tstatement"
+			],
+			[
+				"State",
+				"statement_id\tstatement"
+			],
+			[
+				"gener",
+				"generated_survey\tstatement"
+			],
+			[
+				"user",
+				"user_answers\tstatement"
+			],
+			[
+				"all",
+				"all_responses\tstatement"
+			],
+			[
+				"Distr",
+				"DistractorQuestionAnswer\tclass"
+			],
+			[
+				"surve",
+				"survey_dict\tstatement"
+			],
+			[
+				"NUM",
+				"NUM_NAMES\tstatement"
+			],
+			[
+				"fetch_",
+				"fetch_biopair\tfunction"
+			],
+			[
+				"fet",
+				"fetch_statement\tfunction"
+			],
+			[
+				"sta",
+				"statements\tstatement"
+			],
+			[
+				"Dis",
+				"DistractorQuestion\tclass"
+			],
+			[
+				"max",
+				"max_duration\tparam"
+			],
+			[
+				"color",
+				"color_utils\tmodule"
+			],
+			[
+				"ser",
+				"serial_utils\tmodule"
+			],
+			[
+				"christ",
+				"christmas_hump\tfunction"
+			],
+			[
+				"data",
+				"dataSection"
+			],
+			[
+				"Data",
+				"dataSection"
+			],
+			[
+				"dat",
+				"dataSection"
+			],
+			[
+				"text",
+				"textSection"
+			],
+			[
+				"var",
+				"varName1"
+			],
+			[
+				"pr",
+				"println"
+			],
+			[
+				"register",
+				"registerTable"
+			],
+			[
+				"switch",
+				"switch_targets"
+			],
+			[
+				"compl",
+				"CompletedSurveyAdmin\tclass"
+			],
+			[
+				"Compl",
+				"CompletedSurveyAdmin\tclass"
+			],
+			[
+				"obj",
+				"obj_str\tparam"
+			],
+			[
+				"distrac",
+				"num_dsitractor_questions"
+			],
+			[
+				"distractor",
+				"distractor_questions"
+			],
+			[
+				"Nei",
+				"NEITHER\tstatement"
+			],
+			[
+				"statement",
+				"statement_name_pairs"
+			],
+			[
+				"result",
+				"result_json"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/NimLime/Support/Nim.sublime-build",
+					""
+				],
+				[
+					"Packages/NimLime/Support/Nim.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/NimLime/Support/Nim.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "yap",
+		"selected_items":
+		[
+			[
+				"yap",
+				"PyYapf: Format Document"
+			],
+			[
+				"yapf",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"",
+				"Babel Transform"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"format",
+				"AutoPEP8: Format Code"
+			],
+			[
+				"onstall",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"asty",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"ast",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"jsp",
+				"JsPrettier: Format Code"
+			],
+			[
+				"forma",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"python",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"astyle",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"prettier",
+				"JsPrettier: Format JavaScript"
+			],
+			[
+				"bab",
+				"Babel Transform"
+			],
+			[
+				"babel",
+				"Babel Transform"
+			],
+			[
+				"rett",
+				"HTMLPrettify"
+			],
+			[
+				"anacon",
+				"Anaconda: Autoformat PEP8 Errors"
+			],
+			[
+				"re",
+				"Python Refactor: Rename"
+			],
+			[
+				"rena",
+				"Python Refactor: Rename"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"rename",
+				"Refactor: Rename a field"
+			],
+			[
+				"pret",
+				"HTMLPrettify"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"rope",
+				"Refactor: Create Rope Project"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ren",
+				"Python Refactor: Rename"
+			],
+			[
+				"renam",
+				"Python Refactor: Rename"
+			],
+			[
+				"pep8",
+				"AutoPEP8: Format Code"
+			],
+			[
+				"form",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"auto",
+				"AutoPEP8: Format Code"
+			],
+			[
+				"pep",
+				"Preferences: AutoPep8 Settings – User"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pre",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"packages",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"remopve",
+				"Package Control: Remove Package"
+			],
+			[
+				"pretti",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"comm",
+				"Git: Quick Commit (current file)"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"ad",
+				"Git: Add All"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git commit",
+				"Git: Quick Commit (repo)"
+			]
+		],
+		"width": 470.0
+	},
+	"console":
+	{
+		"height": 324.0,
+		"history":
+		[
+			"print",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			" import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/christopher/repos/cbu_homecoming_2018"
+	],
+	"file_history":
+	[
+		"/home/christopher/repos/playground/opencv-play/mouse.py",
+		"/home/christopher/repos/playground/opencv-play/interactive_color_filter.py",
+		"/home/christopher/repos/playground/opencv-play/sentdex_corners.py",
+		"/home/christopher/repos/playground/opencv-play/sentdex_smoothing.py",
+		"/home/christopher/repos/playground/opencv-play/edges.py",
+		"/home/christopher/repos/playground/opencv-play/livevideo.py",
+		"/home/christopher/repos/playground/opencv-play/sentdex4.py",
+		"/home/christopher/repos/playground/opencv-play/sentdex3.py",
+		"/home/christopher/repos/cbu_homecoming_2018/markov.py",
+		"/home/christopher/repos/cbu_homecoming_2018/particle_gravity/graphical.py",
+		"/home/christopher/repos/cbu_homecoming_2018/demo_gui.py",
+		"/home/christopher/repos/particle_gravity/graphical.py",
+		"/home/christopher/repos/playground/opencv-play/list_cameras.py",
+		"/home/christopher/repos/playground/opencv-play/sentdex_gradients.py",
+		"/home/christopher/repos/playground/opencv-play/Pipfile",
+		"/home/christopher/repos/cbu_homecoming_2018/Pipfile",
+		"/home/christopher/repos/pymarkoff/setup.py",
+		"/home/christopher/repos/evil_rock_paper_scissors/setup.py",
+		"/home/christopher/repos/cbu_homecoming_2018/Pipfile.lock",
+		"/home/christopher/repos/cbu_homecoming_2018/.git/config",
+		"/home/christopher/repos/cbu_homecoming_2018/.gitmodules",
+		"/home/christopher/repos/cbu_homecoming_2018/rps.py",
+		"/home/christopher/repos/cbu_homecoming_2018/evil_rock_paper_scissors/evil_rock_paper_scissors/__init__.py",
+		"/home/christopher/repos/cbu_homecoming_2018/evil_rock_paper_scissors/setup.py",
+		"/home/christopher/repos/cbu_homecoming_2018/.git/COMMIT_EDITMSG",
+		"/home/christopher/repos/evil-rock-paper-scissors/evilrps/__init__.py",
+		"/home/christopher/repos/evil-rock-paper-scissors/evil_rps.py",
+		"/home/christopher/repos/cbu_homecoming_2018/evilrps/__init__.py",
+		"/home/christopher/repos/playground/opencv-play/test1.py",
+		"/home/christopher/repos/evil-rock-paper-scissors/setup.py",
+		"/home/christopher/repos/Capstone/allamericanregress/models.py",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/__init__.py",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/templates/mockup.html",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/templates/base.html",
+		"/home/christopher/repos/Capstone/allamericanregress/config.py",
+		"/home/christopher/repos/Capstone/allamericanregress/database_engine.py",
+		"/home/christopher/repos/Capstone/allamericanregress/__init__.py",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/app_init.py",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/static/stylesheets/default.css",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/forms.py",
+		"/home/christopher/.config/redshift.conf",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/db.py",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/app.py",
+		"/home/christopher/repos/Capstone/allamericanregress/__main__.py",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/migrations/versions/6741bf5a790a_.py",
+		"/home/christopher/repos/Capstone/requirements.txt",
+		"/home/christopher/repos/pyqueens/graphic-client.py",
+		"/home/christopher/repos/CSC412 Intelligent Systems/SGAction.java",
+		"/home/christopher/repos/CSC412 Intelligent Systems/SearchGraph.java",
+		"/home/christopher/repos/cbu_homecoming_2018/particle-gravity/graphical.py",
+		"/home/christopher/repos/cbu_homecoming_2018/README.md",
+		"/home/christopher/repos/cbu_homecoming_2018/.gitignore",
+		"/home/christopher/repos/Capstone/.gitignore",
+		"/home/christopher/repos/pymarkoff/.gitignore",
+		"/home/christopher/repos/pymarkoff/pymarkoff/__init__.py",
+		"/home/christopher/repos/playground/learn_remi/main.py",
+		"/home/christopher/repos/playground/learn_remi/Pipfile",
+		"/home/christopher/repos/playground/learn_remi/Pipfile.lock",
+		"/home/christopher/repos/playground/voldemort/main.py",
+		"/home/christopher/repos/egr425/lab 2/scale16.h",
+		"/home/christopher/repos/egr425/lab 2/Makefile",
+		"/home/christopher/repos/egr425/lab 1/lab1.c",
+		"/home/christopher/repos/egr425/lab 2/lab2.c",
+		"/home/christopher/repos/Capstone/README.md",
+		"/home/christopher/repos/Capstone/allamericanregress/config/__init__.py",
+		"/home/christopher/repos/bfriend_app/app/templates/base.html",
+		"/home/christopher/repos/bfriend_app/app/templates/home.html",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/templates/index.html",
+		"/home/christopher/repos/Capstone/allamericanregress/setup.py",
+		"/home/christopher/repos/ardulight/.gitignore",
+		"/home/christopher/repos/ardulight/setup.py",
+		"/home/christopher/repos/Capstone/allamericanregress/webapp/__main__.py",
+		"/home/christopher/repos/Capstone/allamericanregress/flask_app/__init__.py",
+		"/home/christopher/repos/Capstone/allamericanregress/flask_app/__main__.py",
+		"/home/christopher/repos/Capstone/allamericanregress/app/__init__.py",
+		"/home/christopher/repos/Capstone/allamericanregress/app/__main__.py",
+		"/home/christopher/AllAmericanRegress/logs.log",
+		"/home/christopher/repos/Capstone/allamericanregress/app/migrations/alembic.ini",
+		"/home/christopher/repos/Capstone/migrations/alembic.ini",
+		"/home/christopher/repos/Capstone/allamericanregress/testing_framework.py",
+		"/home/christopher/repos/Capstone/allamericanregress/win32api_dummy.py",
+		"/home/christopher/repos/playground/spelling_correction/main.py",
+		"/home/christopher/repos/cbu_csse_euler/euler_534/Christopher D Chen/main.py",
+		"/home/christopher/repos/cbu_csse_euler/euler_534/Christopher D Chen/nqueens.py",
+		"/home/christopher/.config/sublime-text-3/Packages/User/PyYapf.sublime-settings",
+		"/home/christopher/.config/sublime-text-3/Packages/PyYapf Python Formatter/PyYapf.sublime-settings",
+		"/home/christopher/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
+		"/home/christopher/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/christopher/repos/cbu_csse_euler/euler_534/Christopher D Chen/notes.txt",
+		"/home/christopher/repos/cbu_csse_euler/euler_534/Christopher D Chen/euler_534.py",
+		"/home/christopher/repos/cbu_csse_euler/euler_534/Christopher D Chen/data/10-5.txt",
+		"/home/christopher/repos/cbu_csse_euler/euler_534/Christopher D Chen/test.txt",
+		"/home/christopher/repos/cbu_csse_euler/euler_534/Christopher D Chen/14-2.txt",
+		"/home/christopher/custom-bashrc/.bashrc",
+		"/home/christopher/repos/playground/nqueens/nqueens.py",
+		"/home/christopher/repos/playground/nqueens/14.txt",
+		"/home/christopher/repos/playground/nqueens/main.py",
+		"/home/christopher/repos/playground/spelling_correction/american-english",
+		"/home/christopher/angular-test-project/README.md",
+		"/home/christopher/repos/erinsmith_psychology_survey/polls/views.py",
+		"/home/christopher/repos/erinsmith_psychology_survey/myproject/urls.py",
+		"/home/christopher/repos/erinsmith_psychology_survey/myproject/static/distractor_quiz.htm",
+		"/home/christopher/repos/playground/dnd/omari_cbu/notes.txt",
+		"/home/christopher/repos/playground/dnd/omari_cbu/runes_converted.csv",
+		"/home/christopher/repos/playground/voldemort/google-10000-english-usa.txt",
+		"/home/christopher/repos/playground/voldemort/voldemort-so.txt",
+		"/home/christopher/repos/playground/voldemort/so_solution.py",
+		"/home/christopher/repos/playground/voldemort/american-english",
+		"/home/christopher/repos/Searching/graphsearches.py",
+		"/home/christopher/repos/Searching/README.md",
+		"/home/christopher/repos/Searching/generatePairings.py",
+		"/home/christopher/repos/random_52_cards/main.py",
+		"/home/christopher/repos/pyqueens/README.md",
+		"/home/christopher/repos/GfxTablet/driver-uinput/networktablet.c",
+		"/home/christopher/repos/particle-gravity/classification/explore classification.ipynb",
+		"/home/christopher/repos/playground/voldemort/voldemort4.txt",
+		"/home/christopher/repos/playground/voldemort/tree.txt",
+		"/home/christopher/repos/egr425/lab 1/lab1.",
+		"/home/christopher/repos/playground/voldemort/voldemorts.txt",
+		"/home/christopher/repos/ardulight/demos.py",
+		"/home/christopher/repos/cbu_csse_euler/euler_036/Christopher D Chen/euler_036.py",
+		"/usr/share/dict/american-english",
+		"/usr/share/dict/words",
+		"/home/christopher/repos/erinsmith_psychology_survey/polls/config.py",
+		"/home/christopher/repos/erinsmith_psychology_survey/polls/templates/polls/poll.html",
+		"/home/christopher/repos/erinsmith_psychology_survey/myproject/static/user_survey.htm",
+		"/home/christopher/repos/erinsmith_psychology_survey/myproject/static/intro.htm",
+		"/home/christopher/repos/erinsmith_psychology_survey/polls/templates/admin/polls/completedsurvey/change_list.html"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 484.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"img",
+			"blur_kernerl",
+			"th",
+			"10",
+			"frame",
+			"self.frame",
+			"hsv",
+			"cmin",
+			"hsv",
+			"lower_red",
+			"list",
+			"img",
+			"combined",
+			"mass",
+			":\n",
+			"linspace",
+			"int((math.log(p.mass**2))**(1 / 2))",
+			"Turtle",
+			"turtle",
+			"Turtle",
+			"edges",
+			"black_lines",
+			"True",
+			"black_lines",
+			"quit"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/home/christopher/repos/cbu_homecoming_2018"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 164.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.autopep8":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 131.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.sublime_haskell_error_panel":
+	{
+		"height": 118.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "Packages/User/python3.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 192.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
