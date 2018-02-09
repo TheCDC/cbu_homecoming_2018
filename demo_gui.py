@@ -32,10 +32,10 @@ class Demo:
 
 demos = [
     Demo('N-Body Physics',
-         ['python3',
+         ['python',
           os.path.join('particle_gravity', 'graphical.py')]),
-    Demo('Markov GUI', ['python3', 'markov.py']),
-    Demo('Evil Rock-Paper-Scissors', ['python3', 'rps.py']),
+    Demo('Markov GUI', ['python', 'markov.py']),
+    Demo('Evil Rock-Paper-Scissors', ['python', 'rps.py']),
 ]
 
 root = tk.Tk()
