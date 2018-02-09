@@ -1,5 +1,6 @@
 import tkinter as tk
 import subprocess
+import os
 
 
 class Demo:
@@ -30,7 +31,9 @@ class Demo:
 
 
 demos = [
-    Demo('N-Body Physics', ['python3', 'particle_gravity/graphical.py']),
+    Demo('N-Body Physics',
+         ['python3',
+          os.path.join('particle_gravity', 'graphical.py')]),
     Demo('Markov GUI', ['python3', 'markov.py']),
     Demo('Evil Rock-Paper-Scissors', ['python3', 'rps.py']),
 ]
