@@ -32,6 +32,7 @@ class Demo:
 demos = [
     Demo('N-Body Physics', ['python3', 'particle_gravity/graphical.py']),
     Demo('Markov GUI', ['python3', 'markov.py']),
+    Demo('Evil Rock-Paper-Scissors', ['python3', 'rps.py']),
 ]
 
 root = tk.Tk()
@@ -44,7 +45,7 @@ text.pack(fill=tk.X)
 for d in demos:
     button = tk.Button(frame, text=d.name, command=d.start)
     button.pack(fill=tk.X)
-    button = tk.Button(frame, text='Kill' + d.name, command=d.stop)
+    button = tk.Button(frame, text='Kill ' + d.name, command=d.stop)
     button.pack(fill=tk.Y)
 
 root.mainloop()
