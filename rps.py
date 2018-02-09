@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import enum
 import random
-
+import os
 
 class RectRegion2D:
     def __init__(self, position, shape):
@@ -95,9 +95,12 @@ class GameManager:
         self.ai = evilrps.Player('AI', evilrps.create_ai())
         self.game = evilrps.Game(self.human, self.ai)
         self.images = {
-            evilrps.Throws.rock: cv2.imread('res/rock128.png'),
-            evilrps.Throws.paper: cv2.imread('res/paper128.png'),
-            evilrps.Throws.scissors: cv2.imread('res/scissors128.png'),
+            evilrps.Throws.rock:
+            cv2.imread(os.path.join('img', 'rock128.png')),
+            evilrps.Throws.paper:
+            cv2.imread(os.path.join('img', 'paper128.png')),
+            evilrps.Throws.scissors:
+            cv2.imread(os.path.join('img', 'scissors128.png')),
         }
 
         print(self.images.keys())
@@ -143,7 +146,7 @@ class GameManager:
             ImageButton(
                 window_name=self.window_name,
                 position=p,
-                image=cv2.imread('res/dice128.png'),
+                image=cv2.imread(os.path.join('img', 'dice128.png')),
                 callback=create_callback(0, rand=True),
                 name='Random'))
         for index, btn in enumerate(self.buttons[GameStates.playing]):
@@ -160,7 +163,7 @@ class GameManager:
             print(p)
             btn.rect.position = p
 
-        img = cv2.imread('res/restart128.png')
+        img = cv2.imread(os.path.join('img', 'restart128.png'))
         restart_btn = ImageButton(
             window_name=self.window_name,
             position=(640 - img.shape[0], 0),
