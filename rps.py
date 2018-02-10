@@ -180,7 +180,7 @@ class GameManager:
             position=(640 - img.shape[0], 0),
             image=img,
             callback=self.reset,
-            name=label)
+            name='Reset')
         self.buttons[GameStates.player_lose].append(restart_btn)
         self.buttons[GameStates.player_win].append(restart_btn)
 
