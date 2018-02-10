@@ -5,6 +5,7 @@ import numpy as np
 import enum
 import random
 import os
+from collections import defaultdict
 
 
 class RectRegion2D:
@@ -113,11 +114,9 @@ class GameManager:
             cv2.imread(os.path.join('img', 'scissors128.png')),
         }
 
-        print(self.images.keys())
-        self.buttons = {s: list() for s in GameStates}
+        self.buttons = defaultdict(list)
         # first dim is noum rows, second dim is col values
         frame_height, frame_width, _ = self.frame.shape
-        print(frame_height, frame_width, _)
 
         def create_callback(throw, rand=False):
             """Return a callback that sets the player's choice."""
@@ -206,7 +205,7 @@ class GameManager:
     def advance(self):
         """Advance the rps game state."""
         self.game.advance()
-        print(self.game.scores)
+        print(self.game.scores, 'predicted:', self.ai.move(None))
 
     def reset(self, *args):
         """Completely reset the game."""
