@@ -17,8 +17,7 @@ I wrote these commands for my linux system(s), but they should work on Windows a
 Execute these commands from the repo root.
 
 ```
-pip3 install --user pipenv
-pipenv --python 3.6
+pip3 install pipenv
 pipenv install
 pipenv shell
 
