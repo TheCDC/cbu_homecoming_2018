@@ -168,7 +168,6 @@ class GameManager:
             offset = 0
             x = index * (frame_width //
                          (len(self.buttons[GameStates.playing]))) + offset
-            assert frame_height - h == 352
             y = frame_height - h
 
             p = (x, y)
