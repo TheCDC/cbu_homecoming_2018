@@ -140,7 +140,6 @@ class GameManager:
             w, h, _ = image.shape
             offset = w // 4
             x = index * (frame_width // (len(self.images))) + offset
-            assert frame_height - h == 352
             y = frame_height - h
 
             p = (x, y)
