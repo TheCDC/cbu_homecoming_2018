@@ -6,7 +6,9 @@ import enum
 import random
 import os
 from collections import defaultdict
-from opencv_gui_utils import ImageButton
+from opencv_gui_utils import ImageButton, FaceFinder
+
+face_classifier = FaceFinder()
 
 
 class GameStates(enum.Enum):
@@ -160,6 +162,11 @@ class GameManager:
 
             rval, self.frame = self.camera.read()
             player_score, ai_score = self.game.scores
+            # detect faces in the image and draw squares over them
+            face_rects = face_classifier.find_face_locations(self.frame)
+            for (x, y, w, h) in face_rects:
+                cv2.rectangle(self.frame, (x, y), (x + w, y + h),
+                              (255, 128, 0), 3)
             # normal game play
             if self.state == GameStates.playing:
                 # check for a winner
