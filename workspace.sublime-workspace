@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"cam",
+				"camindex\tstatement"
+			],
+			[
+				"def",
+				"defaultdict\tclass"
+			],
+			[
+				"K_S",
+				"K_SPACE\tinstance"
+			],
+			[
+				"pla",
+				"playing\tstatement"
+			],
+			[
+				"res",
+				"restart_btn\tstatement"
+			],
+			[
+				"play",
+				"player_lose\tstatement"
+			],
+			[
+				"Pla",
+				"player_win\tstatement"
+			],
+			[
+				"Game",
+				"GameStates\tclass"
+			],
+			[
+				"cli",
+				"click_callback\tparam"
+			],
+			[
+				"fra",
+				"frame_width\tstatement"
+			],
+			[
+				"tar",
+				"target_image\tparam"
+			],
+			[
+				"sha",
+				"shape\tstatement"
+			],
+			[
+				"Rec",
+				"RectRegion2D\tclass"
+			],
+			[
+				"han",
+				"handle_event\tfunction"
+			],
+			[
+				"win",
+				"window_name\tstatement"
+			],
+			[
+				"fram",
+				"frame_width\tstatement"
+			],
+			[
 				"blu",
 				"blur_kernerl\tstatement"
 			],
@@ -60,16 +124,8 @@
 				"get_edge_list\tfunction"
 			],
 			[
-				"res",
-				"resource_dir\tstatement"
-			],
-			[
 				"Key",
 				"KeyboardInterrupt\tclass"
-			],
-			[
-				"tar",
-				"target_dir\tstatement"
 			],
 			[
 				"gen",
@@ -276,10 +332,6 @@
 				"ascii_lowercase\tinstance"
 			],
 			[
-				"pla",
-				"players"
-			],
-			[
 				"alis",
 				"align-items"
 			],
@@ -462,63 +514,47 @@
 			[
 				"dat",
 				"dataSection"
-			],
-			[
-				"text",
-				"textSection"
-			],
-			[
-				"var",
-				"varName1"
-			],
-			[
-				"pr",
-				"println"
-			],
-			[
-				"register",
-				"registerTable"
-			],
-			[
-				"switch",
-				"switch_targets"
-			],
-			[
-				"compl",
-				"CompletedSurveyAdmin\tclass"
-			],
-			[
-				"Compl",
-				"CompletedSurveyAdmin\tclass"
-			],
-			[
-				"obj",
-				"obj_str\tparam"
-			],
-			[
-				"distrac",
-				"num_dsitractor_questions"
-			],
-			[
-				"distractor",
-				"distractor_questions"
-			],
-			[
-				"Nei",
-				"NEITHER\tstatement"
-			],
-			[
-				"statement",
-				"statement_name_pairs"
-			],
-			[
-				"result",
-				"result_json"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "rps.py",
+			"settings":
+			{
+				"buffer_size": 9773,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "demo_gui.py",
+			"settings":
+			{
+				"buffer_size": 1355,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "particle_gravity/graphical.py",
+			"settings":
+			{
+				"buffer_size": 9343,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/christopher/repos/evil_rock_paper_scissors/evil_rock_paper_scissors/__init__.py",
+			"settings":
+			{
+				"buffer_size": 4983,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -559,21 +595,21 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "yap",
+		"height": 128.0,
+		"last_filter": "yapf",
 		"selected_items":
 		[
 			[
-				"yap",
-				"PyYapf: Format Document"
-			],
-			[
 				"yapf",
-				"User: Python PEP8 Autoformat"
+				"PyYapf: Format Document"
 			],
 			[
 				"",
 				"Babel Transform"
+			],
+			[
+				"yap",
+				"User: Python PEP8 Autoformat"
 			],
 			[
 				"html",
@@ -795,32 +831,39 @@
 	},
 	"expanded_folders":
 	[
-		"/home/christopher/repos/cbu_homecoming_2018"
+		"/home/christopher/repos/cbu_homecoming_2018",
+		"/home/christopher/repos/cbu_homecoming_2018/particle_gravity"
 	],
 	"file_history":
 	[
-		"/home/christopher/repos/playground/opencv-play/mouse.py",
-		"/home/christopher/repos/playground/opencv-play/interactive_color_filter.py",
+		"/home/christopher/repos/CSC412 Intelligent Systems/SearchGraph.java",
+		"/home/christopher/repos/CSC412 Intelligent Systems/SearchGraph.class",
+		"/home/christopher/repos/cbu_homecoming_2018/Pipfile",
+		"/home/christopher/repos/evil_rock_paper_scissors/evil_rock_paper_scissors/__init__.py",
+		"/home/christopher/repos/cbu_homecoming_2018/rps.py",
 		"/home/christopher/repos/playground/opencv-play/sentdex_corners.py",
+		"/home/christopher/repos/playground/opencv-play/sentdex_4.py",
+		"/home/christopher/repos/playground/opencv-play/mouse.py",
+		"/home/christopher/repos/cbu_homecoming_2018/markov.py",
+		"/home/christopher/repos/pymarkoff/pymarkoff/__init__.py",
+		"/home/christopher/repos/playground/opencv-play/sentdex_3.py",
+		"/home/christopher/repos/playground/opencv-play/interactive_color_filter.py",
 		"/home/christopher/repos/playground/opencv-play/sentdex_smoothing.py",
 		"/home/christopher/repos/playground/opencv-play/edges.py",
 		"/home/christopher/repos/playground/opencv-play/livevideo.py",
 		"/home/christopher/repos/playground/opencv-play/sentdex4.py",
 		"/home/christopher/repos/playground/opencv-play/sentdex3.py",
-		"/home/christopher/repos/cbu_homecoming_2018/markov.py",
 		"/home/christopher/repos/cbu_homecoming_2018/particle_gravity/graphical.py",
 		"/home/christopher/repos/cbu_homecoming_2018/demo_gui.py",
 		"/home/christopher/repos/particle_gravity/graphical.py",
 		"/home/christopher/repos/playground/opencv-play/list_cameras.py",
 		"/home/christopher/repos/playground/opencv-play/sentdex_gradients.py",
 		"/home/christopher/repos/playground/opencv-play/Pipfile",
-		"/home/christopher/repos/cbu_homecoming_2018/Pipfile",
 		"/home/christopher/repos/pymarkoff/setup.py",
 		"/home/christopher/repos/evil_rock_paper_scissors/setup.py",
 		"/home/christopher/repos/cbu_homecoming_2018/Pipfile.lock",
 		"/home/christopher/repos/cbu_homecoming_2018/.git/config",
 		"/home/christopher/repos/cbu_homecoming_2018/.gitmodules",
-		"/home/christopher/repos/cbu_homecoming_2018/rps.py",
 		"/home/christopher/repos/cbu_homecoming_2018/evil_rock_paper_scissors/evil_rock_paper_scissors/__init__.py",
 		"/home/christopher/repos/cbu_homecoming_2018/evil_rock_paper_scissors/setup.py",
 		"/home/christopher/repos/cbu_homecoming_2018/.git/COMMIT_EDITMSG",
@@ -847,13 +890,11 @@
 		"/home/christopher/repos/Capstone/requirements.txt",
 		"/home/christopher/repos/pyqueens/graphic-client.py",
 		"/home/christopher/repos/CSC412 Intelligent Systems/SGAction.java",
-		"/home/christopher/repos/CSC412 Intelligent Systems/SearchGraph.java",
 		"/home/christopher/repos/cbu_homecoming_2018/particle-gravity/graphical.py",
 		"/home/christopher/repos/cbu_homecoming_2018/README.md",
 		"/home/christopher/repos/cbu_homecoming_2018/.gitignore",
 		"/home/christopher/repos/Capstone/.gitignore",
 		"/home/christopher/repos/pymarkoff/.gitignore",
-		"/home/christopher/repos/pymarkoff/pymarkoff/__init__.py",
 		"/home/christopher/repos/playground/learn_remi/main.py",
 		"/home/christopher/repos/playground/learn_remi/Pipfile",
 		"/home/christopher/repos/playground/learn_remi/Pipfile.lock",
@@ -922,11 +963,7 @@
 		"/home/christopher/repos/cbu_csse_euler/euler_036/Christopher D Chen/euler_036.py",
 		"/usr/share/dict/american-english",
 		"/usr/share/dict/words",
-		"/home/christopher/repos/erinsmith_psychology_survey/polls/config.py",
-		"/home/christopher/repos/erinsmith_psychology_survey/polls/templates/polls/poll.html",
-		"/home/christopher/repos/erinsmith_psychology_survey/myproject/static/user_survey.htm",
-		"/home/christopher/repos/erinsmith_psychology_survey/myproject/static/intro.htm",
-		"/home/christopher/repos/erinsmith_psychology_survey/polls/templates/admin/polls/completedsurvey/change_list.html"
+		"/home/christopher/repos/erinsmith_psychology_survey/polls/config.py"
 	],
 	"find":
 	{
@@ -944,6 +981,48 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"print",
+			"create",
+			"/",
+			"'res'",
+			"/",
+			"re",
+			"res",
+			"brain",
+			"save",
+			"type",
+			"throw_buttons",
+			"buttons",
+			"picture",
+			"ai_scaore",
+			"obj",
+			"[",
+			":",
+			"throws",
+			"=",
+			"k",
+			"v",
+			"click",
+			"set_on_click_listener",
+			"callba",
+			"int",
+			"size",
+			"frame_height, frame_width, _",
+			"y",
+			"x",
+			"shape",
+			"300",
+			"x",
+			"clip",
+			"mouse_pos",
+			"target_imgage",
+			"target_img",
+			"x",
+			"y",
+			"x",
+			"pic",
+			"rock",
+			"human_player",
 			"img",
 			"blur_kernerl",
 			"th",
@@ -992,8 +1071,178 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "rps.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9773,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2726,
+								2726
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"doccontinue.autostop": true,
+							"doccontinue.enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1456.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "demo_gui.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								393,
+								393
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"doccontinue.autostop": true,
+							"doccontinue.enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "particle_gravity/graphical.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2400,
+								2400
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"doccontinue.autostop": true,
+							"doccontinue.enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1647.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/christopher/repos/evil_rock_paper_scissors/evil_rock_paper_scissors/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4983,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1320,
+								1320
+							]
+						],
+						"settings":
+						{
+							"doccontinue.autostop": true,
+							"doccontinue.enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
