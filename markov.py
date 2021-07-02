@@ -59,7 +59,7 @@ class MyApp(remi.App):
         self.input_element.style['border'] = '1px solid black'
         # self.input_element.set_on_change_listener(self.generate_output)
         self.generate_button = gui.Button('Generate')
-        self.generate_button.set_on_click_listener(self.generate_output)
+        self.generate_button.onclick.do(self.generate_output)
 
         self.label2 = gui.Label('Output')
         self.label3 = gui.Label('')
@@ -69,7 +69,7 @@ class MyApp(remi.App):
         self.graph_img = gui.Image(
             '/' + graph_img, width='100%', height='100%')
         self.quit_button = gui.Button('Quit', color='red')
-        self.quit_button.set_on_click_listener(quit)
+        self.quit_button.onclick.do(quit)
 
         # ========== Place UI Elements ==========
         self.root.append(self.container)

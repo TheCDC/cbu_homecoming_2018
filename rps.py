@@ -5,7 +5,7 @@ import numpy as np
 import enum
 import random
 import os
-
+face_cascade = cv2.CascadeClassifier(os.path.join('cv_resources','haarcascade_frontalface_default.xml'))
 class RectRegion2D:
     def __init__(self, position, shape):
         self.position = np.array(position[:2])
@@ -102,6 +102,7 @@ class GameManager:
             evilrps.Throws.scissors:
             cv2.imread(os.path.join('img', 'scissors128.png')),
         }
+        self.face_scan_line_y_offset = 0
 
         print(self.images.keys())
         self.buttons = {s: list() for s in GameStates}
@@ -204,6 +205,8 @@ class GameManager:
     def main(self):
         """Main loop."""
         while True:
+            self.face_scan_line_y_offset +=1
+
             key = cv2.waitKey(1)
 
             if key == 27:  # exit on ESC
@@ -211,6 +214,7 @@ class GameManager:
                 break
 
             rval, self.frame = self.camera.read()
+            
             player_score, ai_score = self.game.scores
             if self.state == GameStates.playing:
                 # normal game play
@@ -241,6 +245,14 @@ class GameManager:
                     self.message = random.choice(messages[self.state])
                 except IndexError:
                     pass
+                # ========== Face detection
+                gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
+                faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+                for (x, y, w, h) in faces:
+                    scan_line_offset_proportion = (self.face_scan_line_y_offset%12)/12
+                    line_y = int(y+h*scan_line_offset_proportion)
+                    cv2.rectangle(self.frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+                    cv2.line(self.frame, (x, line_y), (x+w, line_y), (0, 255, 0), 2)
             elif self.state == GameStates.player_win or self.state == GameStates.player_lose:
                 # player has won or lost
                 self.frame = self.picture
