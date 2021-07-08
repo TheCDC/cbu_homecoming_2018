@@ -5,6 +5,11 @@ import numpy as np
 import enum
 import random
 import os
+from collections import defaultdict
+from opencv_gui_utils import ImageButton, FaceFinder
+
+face_classifier = FaceFinder()
+
 face_cascade = cv2.CascadeClassifier(os.path.join('cv_resources','haarcascade_frontalface_default.xml'))
 class RectRegion2D:
     def __init__(self, position, shape):
@@ -64,11 +69,13 @@ class ImageButton:
 
 
 class GameStates(enum.Enum):
+    """Enumerate states of the game with respect to the UI."""
     playing = 'playing'
     player_lose = 'lose'
     player_win = 'win'
 
 
+# these messages appear on the screen
 messages = {
     GameStates.playing: [''],
     GameStates.player_lose: [
@@ -104,17 +111,17 @@ class GameManager:
         }
         self.face_scan_line_y_offset = 0
 
-        print(self.images.keys())
-        self.buttons = {s: list() for s in GameStates}
-        # first dim is noum rows, second dim is col values
+        self.buttons = defaultdict(list)
+        # first dim is num rows, second dim is col values
         frame_height, frame_width, _ = self.frame.shape
-        print(frame_height, frame_width, _)
 
         def create_callback(throw, rand=False):
+            """Return a callback that sets the player's choice."""
             obj = self
             r = rand
 
             def wrapped(widget):
+                """Set the player's throw."""
                 if r:
                     obj.player_choice = random.choice(list(evilrps.Throws))
                 else:
@@ -124,12 +131,12 @@ class GameManager:
 
             return wrapped
 
+        # instantiate the rock, paper, scissors, buttons
         for index, label in enumerate(evilrps.Throws):
             image = self.images[label]
             w, h, _ = image.shape
             offset = w // 4
             x = index * (frame_width // (len(self.images))) + offset
-            assert frame_height - h == 352
             y = frame_height - h
 
             p = (x, y)
@@ -142,7 +149,7 @@ class GameManager:
                     image=image,
                     callback=create_callback(label),
                     name=label))
-
+        # instantiate the random move button
         self.buttons[GameStates.playing].append(
             ImageButton(
                 window_name=self.window_name,
@@ -150,6 +157,7 @@ class GameManager:
                 image=cv2.imread(os.path.join('img', 'dice128.png')),
                 callback=create_callback(0, rand=True),
                 name='Random'))
+        # re calculate button positions
         for index, btn in enumerate(self.buttons[GameStates.playing]):
             image = btn.image
             w, h, _ = image.shape
@@ -157,7 +165,6 @@ class GameManager:
             offset = 0
             x = index * (frame_width //
                          (len(self.buttons[GameStates.playing]))) + offset
-            assert frame_height - h == 352
             y = frame_height - h
 
             p = (x, y)
@@ -170,7 +177,7 @@ class GameManager:
             position=(640 - img.shape[0], 0),
             image=img,
             callback=self.reset,
-            name=label)
+            name='Reset')
         self.buttons[GameStates.player_lose].append(restart_btn)
         self.buttons[GameStates.player_win].append(restart_btn)
 
@@ -193,7 +200,7 @@ class GameManager:
     def advance(self):
         """Advance the rps game state."""
         self.game.advance()
-        print(self.game.scores)
+        print(self.game.scores, 'predicted:', self.ai.move(None))
 
     def reset(self, *args):
         """Completely reset the game."""
@@ -216,8 +223,14 @@ class GameManager:
             rval, self.frame = self.camera.read()
             
             player_score, ai_score = self.game.scores
+            # detect faces in the image and draw squares over them
+            face_rects = face_classifier.find_face_locations(self.frame)
+            for (x, y, w, h) in face_rects:
+                cv2.rectangle(self.frame, (x, y), (x + w, y + h),
+                              (255, 128, 0), 3)
+            # normal game play
             if self.state == GameStates.playing:
-                # normal game play
+                # check for a winner
                 if player_score - ai_score >= 10:
                     self.picture = self.frame.copy()
                     self.state = GameStates.player_win
@@ -225,22 +238,26 @@ class GameManager:
                     self.picture = self.frame.copy()
                     self.state = GameStates.player_lose
 
-                font = cv2.FONT_HERSHEY_SIMPLEX
+                # decide font color based on who is winning
                 if self.game.scores[0] > self.game.scores[1]:
                     status_color = [0, 255, 0]
                 else:
                     status_color = [0, 0, 255]
+                # generate scoreboard string
                 message = ' '.join([
                     f'{p.name}: {s}'
                     for p, s in zip(self.game.players, self.game.scores)
                 ]) + f' draw: {self.game.draws}'
+                font = cv2.FONT_HERSHEY_SIMPLEX
                 cv2.putText(self.frame, message, (0, 50), font, 1,
                             status_color, 2, cv2.LINE_AA)
+                # don't draw the current move if there isn't one
                 if all(self.game.previous_moves):
                     message = ' vs. '.join(
                         t.name for t in self.game.previous_moves)
                     cv2.putText(self.frame, message, (0, 100), font, 1,
                                 (0, 255, 155), 2, cv2.LINE_AA)
+                # choose a message based on the game state
                 try:
                     self.message = random.choice(messages[self.state])
                 except IndexError:
@@ -253,8 +270,8 @@ class GameManager:
                     line_y = int(y+h*scan_line_offset_proportion)
                     cv2.rectangle(self.frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
                     cv2.line(self.frame, (x, line_y), (x+w, line_y), (0, 255, 0), 2)
-            elif self.state == GameStates.player_win or self.state == GameStates.player_lose:
-                # player has won or lost
+            # player has won or lost
+            elif self.state in [GameStates.player_win, GameStates.player_lose]:
                 self.frame = self.picture
                 cv2.putText(self.frame, self.message, (0, 100), font, 1,
                             (0, 255, 155), 2, cv2.LINE_AA)
@@ -266,7 +283,7 @@ class GameManager:
 
 def main():
     camindex = -1
-    cam = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(camindex)
     rval, frame = cam.read()
     if not rval:
         raise RuntimeError(f'Bad camera ({camindex})!')

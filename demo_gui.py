@@ -32,8 +32,7 @@ class Demo:
 
 demos = [
     Demo('N-Body Physics',
-         ['python',
-          os.path.join('particle_gravity', 'graphical.py')]),
+         ['python', os.path.join('particle_gravity', 'graphical.py')]),
     Demo('Markov GUI', ['python', 'markov.py']),
     Demo('Evil Rock-Paper-Scissors', ['python', 'rps.py']),
 ]
