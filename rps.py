@@ -223,11 +223,7 @@ class GameManager:
             rval, self.frame = self.camera.read()
             
             player_score, ai_score = self.game.scores
-            # detect faces in the image and draw squares over them
-            face_rects = face_classifier.find_face_locations(self.frame)
-            for (x, y, w, h) in face_rects:
-                cv2.rectangle(self.frame, (x, y), (x + w, y + h),
-                              (255, 128, 0), 3)
+     
             # normal game play
             if self.state == GameStates.playing:
                 # check for a winner
@@ -282,7 +278,7 @@ class GameManager:
 
 
 def main():
-    camindex = -1
+    camindex = 0
     cam = cv2.VideoCapture(camindex)
     rval, frame = cam.read()
     if not rval:
